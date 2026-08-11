@@ -1,6 +1,6 @@
-class Platform:
-    def __init__(self, platform_id: int | None, name: str):
-        self._id = platform_id
+class Developer:
+    def __init__(self, developer_id: int | None, name: str):
+        self._id = developer_id
         self._name = name
 
     @property
@@ -16,7 +16,7 @@ class Platform:
         value = value.strip()
 
         if not value:
-            raise ValueError("Platform name cannot be empty")
+            raise ValueError("Developer name cannot be empty")
 
         self._name = value
 
