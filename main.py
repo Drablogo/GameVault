@@ -1,35 +1,11 @@
-from models.platform import Platform
-from models.genre import Genre
-from models.developer import Developer
-from models.game_state import GameState
-from models.game import Game
+from database.schema import Schema
 
 
 def main():
-    pc = Platform(None, "PC")
-    rpg = Genre(None, "RPG")
-    cdpr = Developer(None, "CD Projekt RED")
+    schema = Schema()
+    schema.create_tables()
 
-    game = Game(
-        game_id = 1,
-        title = "Cyberpunk 2077",
-        release_year = 2020,
-        platform=pc,
-        genre=rpg,
-        developer=cdpr,
-        state=GameState.PLAYING,
-        playtime=87.5,
-        rating=9.2
-    )
-
-    print(game)
-
-    game.update_rating(9.5)
-    game.update_playtime(95.0)
-    game.change_state(GameState.COMPLETED)
-
-    print("\nAfter updates:\n")
-    print(game)
+    print("Database created successfully!")
 
 
 if __name__ == "__main__":
