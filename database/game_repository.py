@@ -88,13 +88,6 @@ class GameRepository(BaseRepository):
 
         self._close()
 
-        games = []
-
-        for row in rows:
-            games.append(
-                GameMapper.to_game(row)
-            )
-
         return [GameMapper.to_game(row) for row in rows]
 
     def get_game_by_id(self, game_id):

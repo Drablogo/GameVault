@@ -55,7 +55,7 @@ class Seed:
                 developer=Developer(name="Capcom"),
                 state=GameState.COMPLETED,
                 playtime=18.2,
-                rating=9.5,
+                rating=9.2,
                 cover_path="assets/covers/re2_cover.jpg"
             ),
 
@@ -79,7 +79,7 @@ class Seed:
                 developer=Developer(name="Santa Monica Studio"),
                 state=GameState.COMPLETED,
                 playtime=54.3,
-                rating=9.0,
+                rating=9.1,
                 cover_path="assets/covers/gow_cover.jpg"
             ),
 
@@ -91,7 +91,7 @@ class Seed:
                 developer=Developer(name="Sucker Punch Productions"),
                 state=GameState.COMPLETED,
                 playtime=30.7,
-                rating=9.7,
+                rating=8.9,
                 cover_path="assets/covers/ghost_cover.jpg"
             ),
 
@@ -115,7 +115,7 @@ class Seed:
                 developer=Developer(name="Capcom"),
                 state=GameState.PLAYING,
                 playtime=16.3,
-                rating=9.3,
+                rating=9.0,
                 cover_path="assets/covers/dmc_cover.jpg"
             ),
 
@@ -139,7 +139,7 @@ class Seed:
                 developer=Developer(name="Sandfall Interactive"),
                 state=GameState.PLAYING,
                 playtime=52.7,
-                rating=9.8,
+                rating=9.3,
                 cover_path="assets/covers/clair_cover.jpg"
             )
 
