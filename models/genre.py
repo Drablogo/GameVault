@@ -1,5 +1,5 @@
 class Genre:
-    def __init__(self, genre_id: int | None, name: str):
+    def __init__(self, name, genre_id=None):
         self._id = genre_id
         self._name = name
 
@@ -10,6 +10,10 @@ class Genre:
     @property
     def name(self):
         return self._name
+
+    @id.setter
+    def id(self, value):
+        self._id = value
 
     @name.setter
     def name(self, value):

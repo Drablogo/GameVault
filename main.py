@@ -1,11 +1,14 @@
 from database.schema import Schema
+from database.seed import Seed
 
 
 def main():
+
     schema = Schema()
     schema.create_tables()
 
-    print("Database created successfully!")
+    seed = Seed()
+    seed.populate()
 
 
 if __name__ == "__main__":

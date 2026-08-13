@@ -1,5 +1,5 @@
 class Platform:
-    def __init__(self, platform_id: int | None, name: str):
+    def __init__(self, name, platform_id=None):
         self._id = platform_id
         self._name = name
 
@@ -10,6 +10,10 @@ class Platform:
     @property
     def name(self):
         return self._name
+
+    @id.setter
+    def id(self, value):
+        self._id = value
 
     @name.setter
     def name(self, value):

@@ -1,5 +1,5 @@
 class Developer:
-    def __init__(self, developer_id: int | None, name: str):
+    def __init__(self, name, developer_id=None):
         self._id = developer_id
         self._name = name
 
@@ -10,6 +10,10 @@ class Developer:
     @property
     def name(self):
         return self._name
+
+    @id.setter
+    def id(self, value):
+        self._id = value
 
     @name.setter
     def name(self, value):

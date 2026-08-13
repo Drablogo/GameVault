@@ -8,26 +8,28 @@ from models.game_state import GameState
 class Game:
     def __init__(
             self,
-            game_id: int,
-            title: str,
-            release_year: int,
-            platform: Platform,
-            genre: Genre,
-            developer: Developer,
-            state: GameState,
-            playtime: float = 0.0,
-            rating: float = 0.0
+            title,
+            release_year,
+            platform,
+            genre,
+            developer,
+            state,
+            playtime,
+            rating,
+            cover_path="",
+            game_id = None
     ):
 
         self._id = game_id
-        self.title = title
-        self.release_year = release_year
-        self.platform = platform
-        self.genre = genre
-        self.developer = developer
-        self.state = state
-        self.playtime = playtime
-        self.rating = rating
+        self._title = title
+        self._release_year = release_year
+        self._platform = platform
+        self._genre = genre
+        self._developer = developer
+        self._state = state
+        self._playtime = playtime
+        self._rating = rating
+        self._cover_path = cover_path
 
     @property
     def id(self):
@@ -132,6 +134,15 @@ class Game:
 
         self._rating = float(value)
 
+    @property
+    def cover_path(self):
+        return self._cover_path
+
+    @cover_path.setter
+    def cover_path(self, value):
+        self._cover_path = value
+
+
     def update_rating(self, rating: float):
         self.rating = rating
 
@@ -143,12 +154,13 @@ class Game:
 
     def __str__(self):
         return (
-            f"Title: {self.title}\n"
-            f"Release Year: {self.release_year}\n"
-            f"Platform: {self.platform}\n"
-            f"Genre: {self.genre}\n"
-            f"Developer: {self.developer}\n"
-            f"State: {self.state}\n"
-            f"Playtime: {self.playtime:.1f} hours\n"
-            f"Rating: {self.rating:.1f}/10"
+            f"Title: {self._title}\n"
+            f"Release Year: {self._release_year}\n"
+            f"Platform: {self._platform}\n"
+            f"Genre: {self._genre}\n"
+            f"Developer: {self._developer}\n"
+            f"State: {self._state}\n"
+            f"Playtime: {self._playtime:.1f} hours\n"
+            f"Rating: {self._rating:.1f}/10"
+            f"Cover: {self._cover_path}\n"
         )
